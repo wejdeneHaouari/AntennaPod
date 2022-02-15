@@ -1,3 +1,15 @@
+plugins {
+  id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "wejdeneHaouari_AntennaPod"
+    property "sonar.organization", "wejdenehaouari"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
 buildscript {
     repositories {
         google()
@@ -93,14 +105,4 @@ task checkstyle(type: Checkstyle) {
     exclude("**/generated/**")
 }
 
-plugins {
-  id "org.sonarqube" version "3.3"
-}
 
-sonarqube {
-  properties {
-    property "sonar.projectKey", "wejdeneHaouari_AntennaPod"
-    property "sonar.organization", "wejdenehaouari"
-    property "sonar.host.url", "https://sonarcloud.io"
-  }
-}
